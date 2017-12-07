@@ -1,9 +1,11 @@
 package com.wanggang.array;
 
+import java.util.Arrays;
+
 /**
  * create by Gary Wong
  * 2017/12/6
- * class describetion : java中的数组
+ * class describetion : java中的数组 包含常用的数组方法 Arrays 类
  */
 public class ArrayOfJava {
     //声明一个数组 推荐
@@ -37,6 +39,12 @@ public class ArrayOfJava {
         //将数组作为函数的返回值
         int[] returnArr = returnArr();
         System.out.println(returnArr.toString());
+
+        //将数组按升序排列
+        int[] ints2 = {4,2,3,5,6546,6};
+        for(int a : sortArrayWithArr(ints2)){
+            System.out.println(a);
+        }
     }
 
     /**
@@ -54,6 +62,16 @@ public class ArrayOfJava {
      */
     public static int[] returnArr(){
         int[] ints = {1,2,3};
+        return ints;
+    }
+
+    /**
+     * 数组拍讯
+     * @param ints 需要排序的数组
+     * @return 排序后的数组
+     */
+    public static int[] sortArrayWithArr(int[] ints){
+        Arrays.sort(ints);
         return ints;
     }
 }
